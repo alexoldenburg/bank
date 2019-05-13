@@ -1,8 +1,12 @@
+
+import { Page } from './page.js';
+import styles from './style/style.scss';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render(
-    <div className="container">LET'S GET THIS THING STARTED</div>,
+    <Page />,
     document.getElementById('bankapp')
 );
 

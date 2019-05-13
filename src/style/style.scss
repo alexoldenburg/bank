@@ -1,0 +1,192 @@
+* { box-sizing: border-box; }
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+
+body, #bankapp {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    height: 100%;
+    width: 100%;
+}
+ul { margin:0; padding: 0; }
+
+.title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+.clearBoth { clear: both; }
+.left-pane { float: left; }
+.right-pane { float: right; }
+
+.container {
+    background-image: linear-gradient(#ffffff, #eeeeee);
+    width: 700px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.header {
+    ul.menu {
+        height: 22px; margin-top: 40px; margin-bottom: 5px;
+
+        li {
+            list-style-type: none;
+            float: left;
+            border-right: #000 1px solid;
+            text-transform: uppercase;
+            padding: 0 5px 4px;
+            vertical-align: text-top;
+            font-size: 11px;
+
+            &:first-child { padding-left: 0; }
+            &:last-child { border: none; }
+
+            &:hover,
+            &.active { border-bottom: #b7e11b 2px solid; }
+        }
+    }
+}
+
+.banner {
+    height: 180px;
+    margin-left: -165px;
+}
+
+.view {
+    margin-top: 65px;
+
+    .account {
+        vertical-align: top;
+        margin-left: 29px;
+        width: 230px;
+        float: left;
+        display: inline-block;
+
+        .title { padding-left: 3px; }
+        .overview { color: #ffffff; }
+        .right-pane {
+            position: relative;
+            right: -4px;
+            font-size: 20px;
+            width: 80px;
+
+            &::before { content: '\20AC' }
+        }
+
+        .cumilative {
+            display: inline-flex;
+            float: right;
+
+            div.decimals {
+                font-size: 10px;
+                position: relative;
+                top: 3px;
+            }
+        }
+
+        li {
+            list-style-type: none;
+            height: 35px;
+            width: 230px;
+            border: #c5c5c5 1px solid;
+            border-radius: 0 18px 18px 0;
+            background-color: #9dd40d;
+            padding: 6px 9px;
+
+            .type { font-size: 10px; }
+            .number { color: #555555; font-size: 8px; }
+        }
+    }
+
+    .page {
+        vertical-align: top;
+        margin-left: 110px;
+        display: inline-block;
+
+        .info {
+            width: 258px;
+            border: #c1c1c1 1px solid;
+            padding: 10px;
+            font-size: 10px;
+
+            form { margin: 0; }
+            label {
+                width: 100%;
+                clear: both;
+                display: inline-block;
+                margin-bottom: 10px;
+
+                input,
+                select {
+                    width: 147px;
+                    float: right;
+                    border: none;
+                    height: 10px;
+                    font-size: 8px;
+                    margin: 0;
+                }
+
+                input.share-large { width: 126px; margin-right: 2px; }
+                input.share-small { width: 19px; }
+
+                .fullWidth { width: 147px; height: 10px; float: right; }
+                .executionDate input { float: left; width: 25px; margin-right: 2px; }
+            }
+
+            input[type="submit"] {
+                float: right;
+                clear: right;
+                background-color: #9dd40d;
+                color: #ffffff;
+                font-size: 8px;
+            }
+            input[type="checkbox"] {
+                width: 10px;
+                float: left;
+            }
+
+            .transaction {
+                margin-bottom: 15px;
+                display: inline-block;
+                width: 100%;
+
+                &:last-of-type { margin-bottom: 0; }
+
+                .action-pane { display: inline-block; margin-top: 3px; }
+                .name { font-size: 15px; }
+                .action {
+                    margin-left: 80px;
+                    display: inline-block;
+                    width: 20px;
+                    line-height: 15px;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                    text-align: center;
+
+                    &.substract { background-color: #cbe87e; }
+                    &.add { background-color: #9dd40d; }
+                }
+                .cumilative {
+                    display: inline-flex;
+                    float: right;
+                    font-size: 15px;
+
+                    &::before { content: '\20AC' }
+
+                    .whole { margin-left: 5px; }
+                    .decimals { font-size: 10px; }
+                }
+            }
+        }
+
+        .title { padding-left: 11px; }
+    }
+}
