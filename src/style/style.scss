@@ -51,6 +51,8 @@ ul { margin:0; padding: 0; }
 
             &:hover,
             &.active { border-bottom: #b7e11b 2px solid; }
+
+            a { text-decoration: none; color: #000000; }
         }
     }
 }
@@ -160,10 +162,10 @@ ul { margin:0; padding: 0; }
 
                 &:last-of-type { margin-bottom: 0; }
 
+                .left-pane { width: 136px; }
                 .action-pane { display: inline-block; margin-top: 3px; }
                 .name { font-size: 15px; }
                 .action {
-                    margin-left: 80px;
                     display: inline-block;
                     width: 20px;
                     line-height: 15px;

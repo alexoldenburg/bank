@@ -10,14 +10,26 @@ class Page extends Component {
         super( props );
 
         const page = window.location.hash.substr(1) || 'home';
-        this.state = { page };
+        this.state = { page, view: null };
 
         this.changePage = this.changePage.bind( this );
     }
 
-    changePage( page ) {
-        this.setState({ page });
+    changePage( view ) {
+
+        import( './views/' + view + '.js' ).then(
+            (e, r) => {
+                this.setState({
+                    view: e.default,
+                    page: view
+                });
+            }
+        );
         return false;
+    }
+
+    componentDidMount() {
+        this.changePage( this.state.page );
     }
 
     render() {
@@ -25,7 +37,7 @@ class Page extends Component {
             <div className="container">
                 <Header page={this.state.page} changePage={this.changePage} />
                 <Banner />
-                <View page={this.state.page} />
+                <View page={this.state.view} />
             </div>
         );
     }

@@ -1,4 +1,3 @@
-
 import { Page } from './page.js';
 import styles from './style/style.scss';
 

@@ -1,4 +1,4 @@
-import { ViewFactory } from './viewfactory.js';
+import Loading from './views/loading.js';
 
 import React, { Component } from 'react';
 
@@ -9,10 +9,11 @@ class View extends Component {
     }
 
     render() {
-        console.log( 'state::', this.props );
+
+        const CurPage = this.props.page || Loading;
         return (
             <div className="view">
-                <ViewFactory view={this.props.page} />
+                <CurPage />
             </div>
         );
     }
